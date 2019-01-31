@@ -27,7 +27,7 @@ namespace MeuTrabalho.Controllers
                 SqlCommand cmd = new SqlCommand($"SELECT username FROM tbLogin WHERE email='{model.Email}' AND pwd='{model.Password}'", connection);
 
                 connection.Open();
-                string username = (string)cmd.ExecuteScalar();
+                string username  = (string)cmd.ExecuteScalar();
 
                 connection.Close();
 
